@@ -1,2 +1,2 @@
 # php-practice
-my-first-day
+registrer with php
