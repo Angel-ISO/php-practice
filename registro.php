@@ -11,6 +11,7 @@
     <form action="saveSingUp.php" method="post">
     Nombre: <input type="text" name="nombre"><br>
     edad: <input type="text" name="edad"><br>
+    
             <input type="submit" value="guardar">
     </form>
 </body>
