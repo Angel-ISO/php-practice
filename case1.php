@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>bienvenido tripulante de apolo</p>
-</body>
-</html>
+    Hola tripulante de apolo: <?php isset($_POST["nombre"]) ? print $_POST["nombre"] : ""; ?><br>
+    una respuesta llegara en las proximas semanas a tu email. <?php isset($_POST["email"]) ? print $_POST["email"] : ""; ?><br>
+    Tu nivel de ingles es apropiado. <?php isset($_POST["ingles"]) ? print $_POST["ingles"] : ""; ?>
+

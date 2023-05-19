@@ -11,21 +11,21 @@
 </head>
 <body>
 <form action="<?php  echo $urldest; ?>" method="post">
-    Nombre: <input type="text" name="nombre"><br>
-    apellido: <input type="text" name="apellido"><br>
+    Nombre: <input type="text" name="nombre" value=""><br>
+    apellido: <input type="text" name="apellido" value=""><br>
     email: <input type="email" name="email"><br>
     telefono: <input type="text"><br>
 
-<p>selecciones su esperiencia academica</p>
+<p>selecciona su esperiencia academica</p>
 
 
 
     <select name="experiencia">
-  <option value="b">bachiller</option>
-  <option value="t">tenico</option>
-  <option value="T">tecnologo</option>
-  <option value="p">profesional</option>
-  <option value="EU">estudiante U</option>
+  <option value="b" >bachiller</option>
+  <option value="t" >tenico</option>
+  <option value="T" >tecnologo</option>
+  <option value="p" >profesional</option>
+  <option value="EU" >estudiante U</option>
 
 
 </select>
@@ -71,11 +71,17 @@ $longitud = count($_POST['lenguajes']);
 foreach($_POST['lenguajes'] as $lenguajes) {
     echo "<p>Valor recibido: $lenguajes </p>";
 
-
-if($longitud <= 2){
-$urldest = window.location.replace("http://localhost:4000/case1.php"); 
-} 
 }
+if($longitud <= 2){
+$urldest = header( 'Location: http://localhost:4000/case1.php' ) ;
+
+} 
+elseif($longitud <= 4){
+    $urldest = header( 'Location: http://localhost:4000/case2.php' ) ;
+}elseif($longitud <= 6){
+    $urldest = header( 'Location: http://localhost:4000/case3.php' ) ;
+}
+
 ?>
 
 
