@@ -21,11 +21,11 @@
 
 
     <select name="experiencia">
-  <option value="b" >bachiller</option>
-  <option value="t" >tenico</option>
-  <option value="T" >tecnologo</option>
-  <option value="p" >profesional</option>
-  <option value="EU" >estudiante U</option>
+  <option value="bachiller" >bachiller</option>
+  <option value="tecnico" >tenico</option>
+  <option value="Tecnologo" >tecnologo</option>
+  <option value="profesional" >profesional</option>
+  <option value="estudiante universitario" >estudiante U</option>
 
 
 </select>
@@ -48,9 +48,9 @@ typescript: <input type="checkbox" value="ts" name="lenguajes[]"><br>
 <p>nivel de ingles</p>
 
 <select name="ingles">
-  <option value="L">bajo</option>
-  <option value="I">intermedio</option>
-  <option value="A">alto</option>
+  <option value="BAJO">bajo</option>
+  <option value="MEDIO">intermedio</option>
+  <option value="ALTO">alto</option>
 </select><br><br>
 
 
@@ -73,13 +73,13 @@ foreach($_POST['lenguajes'] as $lenguajes) {
 
 }
 if($longitud <= 2){
-$urldest = header( 'Location: http://localhost:4000/case1.php' ) ;
+$urldest = header( 'Location: case1.php?cc=' . '&nombre=' . $_POST["nombre"] . '%20' . $_POST["apellido"] .'&email=' . $_POST["email"]  . '&nivelEstudio=' . $_POST["experiencia"] . '&lenguajes=' . implode(',', $_POST["lenguajes"]) . '&ingles=' . $_POST["ingles"]);
 
 } 
 elseif($longitud <= 4){
-    $urldest = header( 'Location: http://localhost:4000/case2.php' ) ;
+    $urldest = header( 'Location: case2.php?cc=' . '&nombre=' . $_POST["nombre"] . '%20' . $_POST["apellido"] .'&email=' . $_POST["email"]  . '&nivelEstudio=' . $_POST["experiencia"] . '&lenguajes=' . implode(',', $_POST["lenguajes"]) . '&ingles=' . $_POST["ingles"]);
 }elseif($longitud <= 6){
-    $urldest = header( 'Location: http://localhost:4000/case3.php' ) ;
+    $urldest = header( 'Location: case3.php?cc=' . '&nombre=' . $_POST["nombre"] . '%20' . $_POST["apellido"] .'&email=' . $_POST["email"]  . '&nivelEstudio=' . $_POST["experiencia"] . '&lenguajes=' . implode(',', $_POST["lenguajes"]) . '&ingles=' . $_POST["ingles"]);
 }
 
 ?>

@@ -1,4 +1,17 @@
-Hola tripulante de artemis <?php isset($_POST["nombre"]) ? print $_POST["nombre"] : ""; ?><br>
-    una respuesta llegara en las proximas semanas a tu email. <?php isset($_POST["email"]) ? print $_POST["email"] : ""; ?><br>
-    Tu nivel de ingles es apropiado. <?php isset($_POST["ingles"]) ? print $_POST["ingles"] : ""; ?>
+<?php
 
+$nombre = $_GET["nombre"];
+$email = $_GET["email"];
+$movil = $_GET["movil"];
+$nivelEstudio = $_GET["nivelEstudio"];
+$lenguajes = explode(',', $_GET["lenguajes"]);
+$ingles = $_GET["ingles"];
+
+
+echo "eres Artemis <br>";
+echo "tu Nombre: " . $nombre . "<br>";
+echo "tu Email: " . $email . "<br>";
+echo "tu Nivel de Estudio: " . $nivelEstudio . "<br>";
+echo "Lenguajes mas usados: " . implode(", ", $lenguajes) . "<br>";
+echo "Nivel de Inglés actual: " . $ingles . "<br>";
+?>
